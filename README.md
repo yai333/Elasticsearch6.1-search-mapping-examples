@@ -29,10 +29,10 @@ PUT MyIndex
 POST /_reindex
 {
   "source": {
-    "index": "myIndex-v2"
+    "index": "myIndex"
   },
   "dest": {
-    "index": "myIndex"
+    "index": "myIndex-v2"
   }
 }
 ```
@@ -175,5 +175,4 @@ GET _msearch
  {"query" : {"match_all" : {}}, "from" : 0, "size" : 10}
  {"index" : "myIndex2"}
  {"query" : {"match_all" : {}}, "from" : 0, "size" : 10}
-
 ```
