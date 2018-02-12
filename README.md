@@ -177,7 +177,7 @@ GET _msearch
  {"query" : {"match_all" : {}}, "from" : 0, "size" : 10}
 ```
 
-Update by query
+## Update by query
 ```
 POST /myindex/_update_by_query
 {
