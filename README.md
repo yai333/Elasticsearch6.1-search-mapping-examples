@@ -176,3 +176,17 @@ GET _msearch
  {"index" : "myIndex2"}
  {"query" : {"match_all" : {}}, "from" : 0, "size" : 10}
 ```
+
+Update by query
+```
+POST /myindex/_update_by_query
+{
+  "script" : {
+        "source": "ctx._source.updatefield='new value'",
+        "lang": "painless",
+        "params" : {
+            "username" : "my username"
+        }
+    }
+}
+```
